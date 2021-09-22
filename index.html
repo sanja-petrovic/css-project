@@ -158,6 +158,13 @@
       color: hsl(192, 100%, 9%);
       text-align: center;
     }
+    .big-text-two {
+      font-family: 'Poppins';
+      font-size: 100px;
+      font-weight: 700;
+      color: hsl(192, 100%, 9%);
+      text-align: center;
+    }
 
     .small-text-one {
       text-align: center;
@@ -398,7 +405,9 @@
       .top-right-button {
       }
       .boxes {
-        flex-direction: column;
+        display: grid;
+        grid-auto-flow: row;
+        grid-auto-rows: 1fr;
       }
       .communities-box {
         margin-right: 0;
@@ -406,10 +415,11 @@
       }
 
       .big-picture-one {
-          width: 100;
+          width: 100%;
           max-width: 450px;
-
       }
+
+      
       .section-three {
         flex-direction: column-reverse;
         text-align: center;
@@ -534,7 +544,7 @@
         </div>
         <div class="messages-box">
           <img class="small-icon-one" src="images/icon-messages.svg">
-          <div class="big-text-one">2.7m+</div>
+          <div class="big-text-two">2.7m+</div>
           <div class="small-text-one">Messages Sent</div>
         </div>
       </div>
