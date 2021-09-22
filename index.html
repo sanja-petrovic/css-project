@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Huddle landing page with curved sections</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    footer {
+      font-family: 'Open Sans', sans-serif;
+      background-color: hsl(192, 100%, 9%);
+      color: white;
+      margin-top: -12px;
+      margin-bottom: -20px;
+      padding-bottom: 7px;
+    }
+
+    
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(321, 100%, 78%); }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 50px;
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+
+    .top-right-button {
+      width: 100%;
+      white-space: nowrap;
+      width: auto;
+      max-width: 20vw;
+      text-align: center;
+      background-color: white;
+      color: hsl(322, 100%, 66%);
+      border-style: solid;
+      border-color: hsl(322, 100%, 66%);
+      border-radius: 21px;
+      border-width: 1px;
+      padding: 0.7em 2em 0.7em 2em;
+      transition-duration: 0.2s;
+      font-family: 'Open Sans', sans-serif;
+      box-shadow: 1px 1px 10px -4px #c9c9c9;
+      font-size: 14px;
+    }
+
+    .top-right-button:hover {
+      color: hsl(321, 100%, 78%);
+      border-color: hsl(321, 100%, 78%);
+    }
+    .top-right-button:active {
+      transform: scale(0.9);
+    }
+
+    .section-one {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .title-one {
+      font-family: 'Poppins';
+      text-align: center;
+      font-size: 42px;
+      font-weight: bolder;
+      margin: 150px 20px 20px;
+      color: hsl(192, 100%, 9%);
+    }
+
+    .subtext-one {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 400;
+      max-width: 500px;
+      margin-right: 40px;
+      margin-left: 40px;
+      font-family: 'Open Sans', sans-serif;
+      color: hsl(192, 100%, 9%);
+    }
+
+    .top-middle-button {
+      margin-top: 30px;
+      width: 100%;
+      width: auto;
+      min-width: 150px;
+      max-width: 280px;
+      background-color: hsl(322, 100%, 66%);
+      color: white;
+      border-style: solid;
+      border-color: hsl(322, 100%, 66%);
+      border-radius: 35px;
+      border-width: 1px;
+      padding: 1em 2em 1em 2em;
+      transition-duration: 0.4s;
+      position: relative;
+      display: inline-block;
+      text-align: center;
+      font-weight: 600;
+      box-shadow: 5px 5px 20px -4px #a1a1a1;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 20px;
+    }
+
+    .top-middle-button:hover {
+      color: white;
+      border-color: hsl(321, 100%, 78%);
+      background-color: hsl(321, 100%, 78%);
+    }
+
+    .top-middle-button:active {
+      transform: scale(0.9);
+    }
+
+    .section-two {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .big-picture-one {
+      margin-top: 120px;
+      margin-bottom: 120px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .boxes {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .communities-box {
+      margin-right: 20em;
+    }
+
+    .big-text-one {
+      font-family: 'Poppins';
+      font-size: 100px;
+      font-weight: 700;
+      color: hsl(192, 100%, 9%);
+      text-align: center;
+    }
+
+    .small-text-one {
+      text-align: center;
+      font-size: 24px;
+      color: rgb(83, 83, 83);
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .small-icon-one {
+      max-width: 30px;
+    }
+
+    .section-three {
+      display: flex;
+      justify-content: space-between;
+      background-color:  hsl(207, 100%, 98%);
+      align-items: center;
+      padding-bottom: 100px;
+    }
+    
+    .text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .big-picture-two {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 100px;
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+
+    .title-two {
+      font-size: 40px;
+      margin-bottom: 15px;
+      font-family: 'Poppins';
+      font-weight: 700;
+      margin-left: 80px;
+      margin-right: 80px;
+      margin-top: 100px;
+      color: hsl(192, 100%, 9%);
+    }
+
+    .subtext-two {
+      text-align: left;
+      font-size: 18px;
+      font-weight: 400;
+      max-width: 550px;
+      margin-right: 80px;
+      margin-left: 80px;
+      font-family: 'Open Sans', sans-serif;
+      color: hsl(192, 100%, 9%);
+    }
+
+    .section-four {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 100px;
+    }
+
+    .section-five {
+      display: flex;
+      justify-content: space-between;
+      background-color:  hsl(207, 100%, 98%);
+      align-items: center;
+      padding-bottom: 100px;
+    }
+
+    .section-picture {
+      width: 100%;
+      margin-bottom: -5px;
+    }
+
+
+    .section-six {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding-bottom: 200px;
+    }
+
+    .bottom-middle-button {
+      margin-top: 15px;
+      width: 100%;
+      min-width: 150px;
+      width: auto;
+      max-width: 280px;
+      background-color: hsl(322, 100%, 66%);
+      color: white;
+      border-style: solid;
+      border-color: hsl(322, 100%, 66%);
+      border-radius: 35px;
+      border-width: 1px;
+      padding: 1em 2em 1em 2em;
+      transition-duration: 0.4s;
+      position: relative;
+      display: inline-block;
+      text-align: center;
+      font-weight: 600;
+      box-shadow: 5px 5px 20px -4px #a1a1a1;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 20px;
+    }
+
+    .bottom-middle-button:hover {
+      color: white;
+      border-color: hsl(321, 100%, 78%);
+      background-color: hsl(321, 100%, 78%);
+    }
+
+    .bottom-middle-button:active {
+      transform: scale(0.9);
+    }
+
+    .section-seven {
+      display: flex;
+      justify-content: space-between;
+      background-color: hsl(192, 100%, 9%);
+      font-family: 'Open Sans', sans-serif;
+      color: white;
+      padding-bottom: 220px;
+    }
+
+    .logo-picture {
+      margin-left: 100px;
+      width: 100%;
+      max-width: 200px;
+      margin-bottom: 15px;
+      margin-top: 100px;
+    }
+
+    .info-text {
+      font-size: 14px;
+      margin-left: 100px;
+      margin-bottom: 15px;
+      max-width: 350px;
+    }
+
+    .small-icon {
+      width: 100%;
+      height: 18px;
+      width: 18px;
+    }
+    .phone {
+      display: flex;
+      justify-content: flex-start;
+      margin-left: 100px;
+    }
+    .phone-text {
+        margin-left: 15px;
+        margin-bottom: 15px;
+    }
+
+
+    .mail {
+      display: flex;
+      justify-content: flex-start;
+      margin-left: 100px;
+    }
+
+    .mail-text {
+        margin-left: 15px;
+    }
+
+    .newsletter {
+      display: flex;
+      flex-direction: column;
+      margin-right: 200px;
+      margin-top: 100px;
+    }
+
+    .newsletter-title {
+      font-weight: 700;
+      font-size: 24px;
+      margin-bottom: 15px;
+      margin-right: 100px;
+    }
+
+    .newsletter-subtext {
+      font-size: 14px;
+      max-width: 350px;
+      margin-right: 100px;
+      margin-bottom: 25px;
+    }
+
+    .newsletter-input {
+      display: flex;
+    }
+
+    .newsletter-box {
+      background-color: white;
+      border-radius: 10px;
+      font-family: 'Open Sans', sans-serif;
+      display: flex;
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 90px;
+      padding-left: 90px;
+      margin-right: 40px;
+    }
+
+    
+
+    .newsletter-button {
+        align-self: center;
+      border-radius: 10px;
+      border-color: hsl(322, 100%, 66%);
+      border-style: solid;
+      text-align: center;
+      background-color: hsl(322, 100%, 66%);
+      font-weight: 600;
+      transition-duration: 0.4s;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+
+    .newsletter-button:hover {
+      color: white;
+      border-color: hsl(321, 100%, 78%);
+      background-color: hsl(321, 100%, 78%);
+    }
+
+    .newsletter-button:active {
+      transform: scale(0.9)
+    }
+
+
+    @media (max-width: 1024px) {
+      .logo {
+        width: 30vw;
+      }
+      .top-right-button {
+      }
+      .boxes {
+        flex-direction: column;
+      }
+      .communities-box {
+        margin-right: 0;
+        margin-bottom: 80px;
+      }
+
+      .big-picture-one {
+          width: 100;
+          max-width: 450px;
+
+      }
+      .section-three {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .section-four {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .section-five {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .subtext-two {
+        text-align: center;
+      }
+
+      .section-seven {
+          display: flex;
+          flex-direction: column-reverse;
+      }
+
+      .logo-picture {
+          margin-left: 0;
+      }
+
+      .mail-text {
+          font-size: 14px;
+          
+      }
+
+      .phone-text {
+          font-size: 14px;
+          margin-bottom: 3vw;
+      }
+
+      .phone, .mail {
+          margin-left: 0;
+      }
+
+      .newsletter {  
+        margin-left: 10vw;
+        margin-right: 10vw;
+
+      }
+
+      .newsletter-subtext {
+          margin-top: 3vw;
+          margin-right: 0;
+          font-size: 16px;
+      }
+      .newsletter-input {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 20vw;
+      }
+
+      .newsletter-button {
+          margin-top: 3vw;
+          max-width: 30vw;
+          align-self: flex-end;
+          padding: 2vw 7vw 2vw 7vw;
+          font-size: 14px;
+      }
+
+      .newsletter-box {
+          margin-top: 6vw;
+          margin-bottom: 0;
+          margin-left: 0;
+          margin-right: 0;
+          padding-top: 2vw;
+          padding-bottom: 2vw;
+          padding-right: 0;
+          padding-left: 0;
+      }
+
+      .info {
+          margin-left: 10vw;
+          margin-right: 10vw;
+          display: flex;
+          flex-direction: column;
+      }
+
+      .info-text {
+          margin-top: 5vw;
+          margin-bottom: 5vw;
+          font-size: 16px;
+          margin-left: 0;
+      }
+
+      html, body {
+          width: 100%;
+          overflow-x: hidden;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/logo.svg" class="logo">
+    <div class="top-right-button">Try it free</div>
+  </header>
+
+  <div class="section-one">
+    <div class="title-one">Build The Community Your Fans Will Love</div>
+    <div class="subtext-one">Huddle re-imagines the way we build communities. You have a voice, but so does 
+    your audience. Create connections with your users as you engage in genuine discussion.</div>
+    <div class="top-middle-button">Get Started For Free</div>
+  </div>
+
+  <div class="section-two">
+    <img class="big-picture-one" src="images/screen-mockups.svg">
+      <div class="boxes">
+        <div class="communities-box">
+          <img class="small-icon-one" src="images/icon-communities.svg">
+          <div class="big-text-one">1.4k+</div>
+          <div class="small-text-one">Communities Formed</div>
+        </div>
+        <div class="messages-box">
+          <img class="small-icon-one" src="images/icon-messages.svg">
+          <div class="big-text-one">2.7m+</div>
+          <div class="small-text-one">Messages Sent</div>
+        </div>
+      </div>
+  </div>
+
+
+  <picture>
+    <source class="section-picture" media="(max-width:500px)" srcset="images/bg-section-top-mobile-1.svg">
+    <img class="section-picture" src="images/bg-section-top-desktop-1.svg"> 
+  </picture>
+
+  
+  <div class="section-three">
+    <div class="text">
+      <div class="title-two">Grow Together</div>
+      <div class="subtext-two">Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form. </div>
+    </div>
+    <img class="big-picture-two" src="images/illustration-grow-together.svg">
+  </div>
+
+  <picture>
+    <source class="section-picture" media="(max-width:500px)" srcset="images/bg-section-bottom-mobile-1.svg">
+    <img class="section-picture" src="images/bg-section-bottom-desktop-1.svg"> 
+  </picture>
+  <div class="section-four">
+    <img class="big-picture-two" src="images/illustration-flowing-conversation.svg">
+    <div class="text"> 
+      <div class="title-two">Flowing Conversations</div>
+    <div class="subtext-two">You wouldn't paginate a conversation in real life, so why do it online? Our threads have 
+      just-in-time loading for a more natural flow.</div>
+    </div>
+  </div>
+
+  <picture>
+    <source class="section-picture" media="(max-width:500px)" srcset="images/bg-section-top-mobile-2.svg">
+    <img class="section-picture" src="images/bg-section-top-desktop-2.svg"> 
+  </picture>
+  <div class="section-five">
+    <div class="text">
+      <div class="title-two">Your Users</div>
+      <div class="subtext-two">It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.
+      </div>
+    </div>
+    <img class="big-picture-two" src="images/illustration-your-users.svg">
+  </div>
+
+  <picture>
+    <source class="section-picture" media="(max-width:500px)" srcset="images/bg-section-bottom-mobile-2.svg">
+    <img class="section-picture" src="images/bg-section-bottom-desktop-2.svg"> 
+  </picture>
+
+  <div class="section-six">
+    <div class="title-one">Ready To Build Your Community?</div>
+    <div class="bottom-middle-button">Get Started For Free</div>
+  </div>
+
+  <picture>
+    <source class="section-picture" media="(max-width:500px)" srcset="images/bg-footer-top-mobile.svg">
+    <img class="section-picture" src="images/bg-footer-top-desktop.svg">
+  </picture>
+
+  <div class="section-seven">
+    <div class="info">
+      <img class="logo-picture" src="images/logo2.png">
+      <div class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia vestibulum a, ultrices quis sem.</div>
+      <div class="phone">
+        <img class="small-icon" src="images/icon-phone.svg"> 
+        <div class="phone-text">Phone: +1-543-123-4567</div>
+      </div>
+      <div class="mail">
+        <img class="small-icon" src="images/icon-email.svg">
+        <div class="mail-text">example@huddle.com</div>
+      </div>
+    </div>
+
+    <div class="newsletter">
+      <div class="newsletter-title">NEWSLETTER</div>
+      <div class="newsletter-subtext">To receive tips on how to grow your community, sign up to our weekly newsletter. We’ll never send you spam or pass on your email address</div>
+      <div class="newsletter-input">
+        <input type="text" class="newsletter-box" placeholder="enter your e-mail here">
+        <div class="newsletter-button">Subscribe</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a class="link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a class="link" href="https://github.com/sansansanya">Sanya</a>.
+    </p>
+  </footer>
+</body>
+</html>
